@@ -26,6 +26,8 @@ getVariousPasswords();
 // Ejemplo entrada: ['Agua', 'Pan', 'Elefante', 'Mesa', 'Oruga']
 // Ejemplo salida: ['Agua', 'Elefante', 'Oruga']
 
+const getWordsWithVowels = () => {};
+getWordsWithVowels();
 // 3 - Bego está calculando la media aritmética de un array de números. Debe mostrar el promedio y el total de elementos en el array.
 // Ejemplo entrada: [5, 10, 15, 20]
 // Ejemplo salida: Promedio: 12.5 - Total de elementos: 4
