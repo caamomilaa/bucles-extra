@@ -174,18 +174,57 @@ getLargeNames(['Pedro', 'Ana', 'Esteban', 'María', 'Begoña']);
 // Ejemplo entrada: [1, 2, 3, 4] y [3, 4, 5, 6]
 // Ejemplo salida: [3, 4]
 
-const getNumberInBothArrays = (firstList, secondList) => {
+const getNumberInBothArrays = () => {
+	const firstList = [1, 2, 3, 4];
+	const secondList = [3, 4, 5, 6];
 	const numbersInBothArrays = [];
+
+	for (const firstNumber of firstList) {
+		for (const secondNumber of secondList) {
+			if (firstNumber === secondNumber) {
+				numbersInBothArrays.push(firstNumber);
+			}
+		}
+	}
+	console.log(numbersInBothArrays);
 };
-getNumberInBothArrays([1, 2, 3, 4], [3, 4, 5, 6]);
+getNumberInBothArrays();
 // 13 - Camila necesita generar un array que contenga todos los números entre dos números dados, inclusive.
 // Ejemplo entrada: 5 y 10
 // Ejemplo salida: [5, 6, 7, 8, 9, 10]
 
+const getNumbersInBetween = (startingNumber, lastNumber) => {
+	const numbersInBetween = [startingNumber, lastNumber];
+	for (let i = startingNumber + 1; i < lastNumber; i++) {
+		numbersInBetween.push(i);
+	}
+	console.log(numbersInBetween); //no me acuerdo como se ponía entre medias.
+};
+getNumbersInBetween(5, 10);
 // 14 - Macarena quiere un programa que devuelva el número total de vocales en cada palabra de un array.
 // Ejemplo entrada: ['Hola', 'Mundo', 'JavaScript']
 // Ejemplo salida: [2, 2, 3]
 
+const getHowManyVowels = words => {
+	const vowels = 'aeiouAEIOU';
+	const howManyVowels = [];
+	for (const letters of words) {
+		if (vowels.includes(letters)) {
+			//pon la cantidad que hay
+		}
+	}
+};
+getHowManyVowels(['Hola', 'Mundo', 'JavaScript']);
 // 15 - Bego quiere que cada string en un array se muestre al revés.
 // Ejemplo entrada: ['Hola', 'Mundo']
 // Ejemplo salida: ['aloH', 'odnuM']
+
+const getReversedWords = wordsList => {
+	const reversedWords = [];
+	for (const word of wordsList) {
+		const reverseWord = word.split('').reverse().join('');
+		reversedWords.push(reverseWord);
+	}
+	console.log(reversedWords);
+};
+getReversedWords(['Hola', 'Mundo']);
